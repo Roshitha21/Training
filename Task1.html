@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.innerimg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay {
+  position: absolute;
+  transition: 1s;
+  background-color: pink;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <img src="profilr.png">
+  <div class="overlay">
+    <div class="innerimg"><img src="profilr.png" ></div>
+  </div>
+</div>
+
+</body>
+</html>

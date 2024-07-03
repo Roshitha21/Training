@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <h3> Finding the function caller name in JavaScript. </h3>
+   <h4> Caller name for func3():</h4>
+   <div id="caller1"> </div>
+   <h4> Caller name for func2(): </h4>
+   <div id="caller2"> </div>
+   <script>
+      let caller1 = document.getElementById("caller1");
+      let caller2 = document.getElementById("caller2");
+      function func3() {
+         caller1.innerHTML += func3.caller.name + " <br/>";
+      }
+      function func2() {
+         caller2.innerHTML += func2.caller.name + " <br/>";
+         func3();
+      }
+      function func1() {
+         func3();
+         func2();
+      }
+      func1();
+
+
+      //callee
+      function myFunctionName() {
+        console.log("Name is " + arguments.callee.name );
+      }
+
+      myFunctionName();
+
+      //callee used for anonymous func
+      function create() {
+         return function(n) {
+            if (n <= 1)
+               return 1;
+            return n * arguments.callee(n - 1);
+         };
+      }
+      var result = create()(5);
+      console.log(result)
+   </script>
+</body>
+</html>

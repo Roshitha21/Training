@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax-2 Json</title>
+</head>
+
+<body>
+    <button id="btn1">Get User</button>
+    <h1>User</h1>
+    <div id="user"></div>
+
+    <script>
+        var btn1 = document.getElementById("btn1");
+        var usr = document.getElementById("user");
+        btn1.addEventListener('click', loadUser);
+       
+        function loadUser() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'user.json', true);
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    var user = JSON.parse(this.responseText)
+    
+                    var output = '';
+                    output += '<table>' +
+                        "<tr><td>" +'ID: '+'</td><td>'+ user.id + "</td></tr><br>" +
+                        "<tr><td>" +'Name: '+'</td><td>'+ user.name + "</td></tr>" +
+                        "<tr><td>" +'Age: '+'</td><td>'+ user.age + "</td></tr>" +
+                        '</table>';
+
+                        // "<tr><td>"+data[i].city+"</td><td>"+data[i].cStatus+"</td></tr>";
+                    usr.innerHTML = output;
+                
+
+                }
+            }
+            xhr.send();
+        }
+
+        // btn2.addEventListener('click', loadUsers);
+
+        // function loadUsers() {
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open('GET', 'users.json', true);
+        //     xhr.onload = function () {
+        //         if (this.status == 200) {
+                    
+        //             var users = JSON.parse(this.responseText)
+        //             for(var j in users){
+        //             console.log(users[j].id)
+        //         }
+
+        //             var opt ='';
+        //             for( var i in users){
+        //             opt += '<ul>' +
+        //                 '<li> ID: ' + users[i].id + '</li>' +
+        //                 '<li> Name: ' + users[i].name + '</li>' +
+        //                 '<li> Email: ' + users[i].email + '</li>' +
+        //                 '</ul>';
+        //             }
+        //             usrs.innerHTML = opt;
+                
+        //         }
+        //     }
+        //     xhr.send();
+        // }
+
+
+    </script>
+
+</body>
+
+</html>

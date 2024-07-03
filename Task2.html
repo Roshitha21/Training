@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.text {
+color: white;
+font-size: 20px;
+position: absolute;
+top: 10%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: top;
+}
+.overlay {
+background-color: pink;
+transition: 1s ;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+opacity: 0;
+
+}
+
+.container:hover .overlay {
+opacity: 1;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="container">
+<img src="profilr.png" class="image">
+<div class="overlay">
+<div class="text">Hello World</div>
+</div>
+</div>
+
+</body>
+</html>

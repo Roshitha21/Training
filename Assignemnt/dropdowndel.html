@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <select id="drop" >
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+</form>
+<br>
+
+<button onclick="myFunction()">Remove</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("drop");
+  x.remove(x.selectedIndex);
+}
+</script>
+
+</body>
+</html>

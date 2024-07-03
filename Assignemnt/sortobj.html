@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myFunction()">Sort</button>
+    <table id="demo" border="1"></table>
+    <script>
+var library = [
+   {
+       title:  'The Road Ahead',
+       author: 'Bill Gates',
+       libraryID: 1001
+   },
+   {
+       title: 'Walter Isaacson',
+       author: 'Steve Jobs',
+       libraryID: 1003
+   },
+   {
+       title: 'Mockingjay: The Final Book of The Hunger Games',
+       author: 'Suzanne Collins',
+       libraryID: 1002
+   }];        displayLibrary();
+        function myFunction() {
+            library.sort(function (x, y) {
+                if (x.title < y.title) { return -1; }
+                if (x.title > y.title) { return 1; }
+                return 0;
+            });
+            displayLibrary();
+        }
+        function displayLibrary() {
+            let t = "";
+            for (let i = 0; i < library.length; i++) {
+                t += "<tr><td>" + library[i].author + "</td><td>" + library[i].title +"</td><td>" + library[i].libraryID + "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = t;
+        }
+    </script>
+
+
+
+    </script>
+</body>
+
+</html>

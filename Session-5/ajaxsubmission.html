@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+	<form id='formId' action=''> 
+        Name:
+		<input type='text' id='name'name='name'><br>
+         Student ID:
+		<input type='text' id='studentId'name='studentId'><br>
+         Contact No. :
+		<input type='text'id='contactNumber'name='contactNumber'><br>
+		<button type='submit'id='submitButton'>Submit</button>
+	</form>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js">
+	</script>
+	<script
+	$(() => {
+		$("#submitButton").click(function(ev) {
+			var form = $("#formId");
+			var url = form.attr('action');
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: form.serialize()
+
+			});
+		});
+	};
+	</script>
+</body>
+
+</html>

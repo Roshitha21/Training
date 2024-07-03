@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+display: flex;
+}
+.bouncing{
+width: 30px;
+height: 30px;
+animation: bounce 1s 0.7s linear infinite;
+margin: 10px;
+}
+.sq1 {
+background-color: orange;
+}
+.sq2 {
+animation-delay: 0.2s;
+background-color: palegreen;
+}
+.sq3 {
+animation-delay: 0.3s;
+background-color: blue;
+}
+
+@keyframes bounce {
+75% {
+transform: scale(1.4);
+}
+}
+</style>
+</head>
+<body>
+<div class="sq1 bouncing "></div>
+<div class="sq2 bouncing "></div>
+<div class="sq3 bouncing"></div>
+</body>
+</html>

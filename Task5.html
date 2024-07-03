@@ -1,0 +1,31 @@
+[29/09, 10:53 pm] Roshitha: <html>
+<head>
+</head>
+<body>
+<div class="reference">
+<div class="popout-menu">Menu</div>
+</div>
+</body>
+</html>
+.reference {
+position: relative;
+background: #CC56FF;
+width: 100px;
+height: 80px;
+}
+
+.popout-menu {
+width: 100px;
+height: 80px;
+position: absolute;
+visibility: hidden;
+left: 100%;
+background: #FF89CC;
+color: white;
+padding: 16px;
+}
+
+.reference:hover > .popout-menu,
+.reference:focus-within > .popout-menu {
+visibility: visible;
+}

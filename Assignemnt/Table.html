@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="changed" border="1"> 
+        <tr><td>1</td> 
+        <td>a</td></tr> 
+        </table><br> 
+        <button onclick="addRow()">Click to Insert a Row</button>
+        
+<script>
+    function addRow()
+{
+var x=document.getElementById('changed').insertRow(0);
+var y = x.insertCell(0);
+var z = x.insertCell(1);
+y.innerHTML="row1";
+z.innerHTML="row2";
+}
+</script>
+</body>
+
+</html>
+   

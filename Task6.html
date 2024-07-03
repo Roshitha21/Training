@@ -1,0 +1,38 @@
+<html>
+<head>
+    <style>
+        .menu {
+        flex-flow: column wrap;
+        height:30px;
+        width: 30px;
+        }
+
+        .menu .bar {
+        height: 5px;
+        margin: 3px 0px;
+        transform-origin: left;
+        background: black;
+        transition: all 0.5s;
+        }
+
+        .menu:hover .top {
+        transform: rotate(30deg);
+        }
+
+        .menu:hover .middle {
+        opacity: 0;
+        }
+
+        .menu:hover .bottom {
+        transform: rotate(-35deg);
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+<div class="bar top"></div>
+<div class="bar middle"></div>
+<div class="bar bottom"></div>
+</div>
+</body>
+</html>
